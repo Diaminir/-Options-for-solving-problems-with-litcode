@@ -1,0 +1,12 @@
+func removeDuplicates(nums []int) int {
+  mapDupl := make(map[int]int)
+	for _, v := range nums {
+		mapDupl[v]++
+	}
+	nums = nums[:0]
+	for k, _ := range mapDupl {
+		nums = append(nums, k)
+	}
+	sort.Ints(nums)
+	return len(nums)
+}
