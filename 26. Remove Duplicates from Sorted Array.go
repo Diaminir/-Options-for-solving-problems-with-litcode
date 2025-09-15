@@ -10,3 +10,11 @@ func removeDuplicates(nums []int) int {
 	sort.Ints(nums)
 	return len(nums)
 }
+
+func main() {
+	slcNum1 := []int{1,1,2}
+	fmt.Println(removeDuplicates(slcNum1))
+
+	slcNum2 := []int{0, 1, 2, 2, 3, 0, 4, 2}
+	fmt.Println(removeDuplicates(slcNum2))
+}
