@@ -4,7 +4,6 @@ mapNums := make(map[int]int)
 		mapNums[v]++
 	}
 	var max int
-	fmt.Println(mapNums)
 	for k, v := range mapNums {
 		if v > mapNums[max] {
 			max = k
