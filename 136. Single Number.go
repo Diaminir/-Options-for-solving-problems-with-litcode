@@ -1,12 +1,15 @@
 func singleNumber(nums []int) int {
-	mapNums := make(map[int]int)
+    mapNums := make(map[int]int)
 	for _, v := range nums {
 		mapNums[v]++
 	}
 	var min int
 	fmt.Println(mapNums)
 	for k, v := range mapNums {
-		if v < mapNums[min] && min != 0 {
+		if v < mapNums[min] {
+			min = k
+		}
+		if min == 0 {
 			min = k
 		}
 	}
