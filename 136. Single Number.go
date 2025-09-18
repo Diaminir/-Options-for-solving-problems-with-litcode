@@ -4,7 +4,6 @@ func singleNumber(nums []int) int {
 		mapNums[v]++
 	}
 	var min int
-	fmt.Println(mapNums)
 	for k, v := range mapNums {
 		if v < mapNums[min] {
 			min = k
